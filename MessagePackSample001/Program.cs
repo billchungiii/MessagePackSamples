@@ -9,21 +9,21 @@ namespace MessagePackSample001
         static void Main(string[] args)
         {
             /// Person class is serialized with key as index
-            var p1 = new Person { Name = "Bill", Age = 36 };            
-            var b1 = MessagePackSerializer.Serialize(p1);           
-            var p1_1 = MessagePackSerializer.Deserialize<Person>(b1);
+            Person p1 = new Person { Name = "Bill", Age = 36 };
+            byte[] b1 = MessagePackSerializer.Serialize(p1);
+            Person p1_1 = MessagePackSerializer.Deserialize<Person>(b1);
             Console.WriteLine($"Name : {p1_1.Name}, Age : {p1_1.Age}, serialization length : {b1.Length}");
 
             /// Person2 class is serialized with key as property name
-            var p2 = new Person2 { Name = "Bill", Age = 36 };
-            var b2 = MessagePackSerializer.Serialize(p2);
-            var p2_1 = MessagePackSerializer.Deserialize<Person2>(b2);
+            Person2 p2 = new Person2 { Name = "Bill", Age = 36 };
+            byte[] b2 = MessagePackSerializer.Serialize(p2);
+            Person2 p2_1 = MessagePackSerializer.Deserialize<Person2>(b2);
             Console.WriteLine($"Name : {p2_1.Name}, Age : {p2_1.Age}, serialization length : {b2.Length}");
 
             /// Person class is serialized by System.Text.Json
-            var json = JsonSerializer.Serialize(p1);
-            var jsonBytes = Encoding.UTF8.GetBytes(json);
-            var p1_2 = JsonSerializer.Deserialize<Person>(jsonBytes);
+            string json = JsonSerializer.Serialize(p1);
+            byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
+            Person p1_2 = JsonSerializer.Deserialize<Person>(jsonBytes);
             Console.WriteLine($"Name : {p1_2.Name}, Age : {p1_2.Age}, serialization length : {jsonBytes.Length}");
         }
     }
