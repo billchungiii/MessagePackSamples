@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePackSample002", "Mes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePack_DateTime_Issue", "MessagePack_DateTime_Issue\MessagePack_DateTime_Issue.csproj", "{403ABDE6-4BBA-4904-A475-774DCAAF2F4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePack_DateTime_Issue2", "MessagePack_DateTime_Issue2\MessagePack_DateTime_Issue2.csproj", "{318A7E89-BF1B-459F-920E-69618086DBCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{403ABDE6-4BBA-4904-A475-774DCAAF2F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{403ABDE6-4BBA-4904-A475-774DCAAF2F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{403ABDE6-4BBA-4904-A475-774DCAAF2F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{318A7E89-BF1B-459F-920E-69618086DBCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{318A7E89-BF1B-459F-920E-69618086DBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{318A7E89-BF1B-459F-920E-69618086DBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{318A7E89-BF1B-459F-920E-69618086DBCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
