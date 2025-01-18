@@ -50,6 +50,13 @@ namespace MessagePack_Benchmark
             var json = JsonSerializer.Serialize(person);
             var personDeserialized = JsonSerializer.Deserialize<Person>(json);
         }
+        [Benchmark]
+        public void ExecNewtonsoft()
+        {
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(person);
+            var personDeserialized = Newtonsoft.Json.JsonConvert.DeserializeObject<Person>(json);
+        }
+       
     }
     
     [MessagePackObject]
