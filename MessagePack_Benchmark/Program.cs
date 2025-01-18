@@ -13,6 +13,7 @@ namespace MessagePack_Benchmark
         }
     }
 
+    [MemoryDiagnoser]
     public class SerializationBenchmark
     {
         private Person person;
@@ -36,7 +37,7 @@ namespace MessagePack_Benchmark
             };
         }
 
-        [Benchmark]
+        [Benchmark]       
         public void ExecMessagePack()
         {
             var bytes = MessagePackSerializer.Serialize(person);
@@ -44,13 +45,14 @@ namespace MessagePack_Benchmark
         }
 
         [Benchmark]
+        
         public void ExecJson()
         {
             var json = JsonSerializer.Serialize(person);
             var personDeserialized = JsonSerializer.Deserialize<Person>(json);
         }
     }
-
+    
     [MessagePackObject]
     public class Person
     {
