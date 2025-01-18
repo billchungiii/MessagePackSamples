@@ -44,8 +44,7 @@ namespace MessagePack_Benchmark
             var personDeserialized = MessagePackSerializer.Deserialize<Person>(bytes);
         }
 
-        [Benchmark]
-        
+        [Benchmark]        
         public void ExecJson()
         {
             var json = JsonSerializer.Serialize(person);
